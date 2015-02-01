@@ -1,0 +1,39 @@
+#header {
+  width: 100%;
+  height: 50px;
+  display: block;
+  padding-top: 11px;
+  border-bottom: 1px solid $orange;
+  .logo {
+    color: $orange;
+    padding-left: 220px;
+    font-size: 1.1em;
+    font-weight: 200;
+  }
+  ul {
+    li {
+      display: inline;
+      @include media($mobile) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      @include media($mediumgrid) {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      @include media($largegrid) {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+
+      a {
+        font-family: 'Roboto', Helvetica;
+        color: black;
+        font-weight: 300;
+        font-size: 1em;
+      }
+    }
+  }
+}

@@ -79,6 +79,13 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     excon (0.43.0)
     execjs (2.2.2)
@@ -177,7 +184,7 @@ GEM
       minitest (>= 3.0)
     hike (1.2.3)
     hitimes (1.2.2)
-    htmlbeautifier (1.0.0)
+    htmlbeautifier (0.0.12)
     htmlentities (4.3.2)
     i18n (0.7.0)
     inflecto (0.0.2)
@@ -234,6 +241,7 @@ GEM
     notiffany (0.0.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -279,6 +287,8 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     refills (0.0.2)
+    responders (2.0.2)
+      railties (>= 4.2.0.alpha, < 5)
     ruby-beautify (0.97.1)
     ruby-progressbar (1.7.1)
     sass (3.4.10)
@@ -324,6 +334,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.0.0.beta3)
       activemodel (~> 4.0)
       binding_of_caller (= 0.7.3.pre1)
@@ -341,10 +353,11 @@ DEPENDENCIES
   bourbon
   byebug (= 3.4.0)
   carrierwave
+  devise
   fog
   font-icons-rails!
   guard-minitest (= 2.3.1)
-  htmlbeautifier
+  htmlbeautifier (= 0.0.12)
   htmlentities (= 4.3.2)
   jbuilder
   jquery-rails

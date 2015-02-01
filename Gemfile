@@ -19,6 +19,7 @@ gem 'neat'
 gem 'mail_form'
 gem 'simple_form'
 gem 'bitters'
+gem 'devise'
 gem 'normalize-rails',         '3.0.1'
 gem 'nokogiri',                '1.6.5'
 gem 'htmlentities',            '4.3.2'
@@ -32,7 +33,7 @@ group :development, :test do
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
   gem 'sqlite3'
-  gem 'htmlbeautifier'
+  gem 'htmlbeautifier', '0.0.12'
   gem 'ruby-beautify'
 end
 
