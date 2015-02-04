@@ -1,0 +1,21 @@
+<p>Title: <%= @novel.title %></p>
+<p>Author: <%= @novel.author%></p>
+<p>Summary: <%= @novel.summary %></p>
+<% if current_user == @novel.user || current_user.try(:admin?) %>
+  <%= link_to "Delete", @novel , method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to "New Chapter", "#{@novel.id}/chapters/new"  %>
+  <%= link_to "Edit Novel Information", edit_novel_path  %>
+<% end %>
+
+<% if @novel.chapters.any? %>
+	<ul>
+	<% @novel.chapters.each do |chapter| %>
+		<li>
+			<%= link_to chapter.title, [@novel, chapter]  %>
+			<% if current_user == @novel.user || current_user.try(:admin?) %>
+				<%= link_to "delete", [@novel, chapter], method: :delete, data: { confirm: "Are you sure?" }  %>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+<% end %>

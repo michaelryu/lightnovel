@@ -1,0 +1,6 @@
+<%= simple_form_for @novel do |f| %>
+  <%= f.input :title, required: true, placeholder: "Coiling Dragon" %>
+  <%= f.input :summary, required: true %>
+  <%= f.input :author, required: true %>
+  <%= f.button :submit, "Edit Novel Information" %>
+<% end %>

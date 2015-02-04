@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   end
   
   root "pages#home"
+  resources :novels do
+  	resources :chapters
+  end
 end

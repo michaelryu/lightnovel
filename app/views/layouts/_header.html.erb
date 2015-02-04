@@ -3,9 +3,10 @@
   <ul id="menu">
     <% if  user_signed_in? %>
 		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li> 
+		<li><%= link_to "New Novel", "/novels/new" %></li>
 		<li><%= link_to "User", user_path(current_user)  %></li> 
 	<% else %>
-		<li><%= link_to "Log In" , 'users/sign_in' %></li> 
+		<li><%= link_to "Log In" , '/users/sign_in' %></li> 
 	<% end %>
   </ul>
 </div>

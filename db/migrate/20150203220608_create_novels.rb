@@ -3,6 +3,8 @@ class CreateNovels < ActiveRecord::Migration
     create_table :novels do |t|
       t.string :title
       t.text :summary
+      t.string :author
+      t.boolean :completed
       t.references :user, index: true
 
       t.timestamps null: false

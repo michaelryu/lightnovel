@@ -1,0 +1,5 @@
+<%= simple_form_for([@novel, @chapter]) do |f| %>
+  <%= f.input :title, required: true, placeholder: "Volume 1, Chapter 4: Hot Summer Night" %>
+  <%= f.input :content, required: true %>
+  <%= f.button :submit, "Publish Chapter" %>
+<% end %>

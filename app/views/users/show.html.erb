@@ -1,1 +1,12 @@
-<%= @user.email %>
+<p>Username: <%= @user.name %></p>
+<p>Email: <%= @user.email %></p> 
+
+<% if @user.novels.any? %>
+	<ul>
+		<% @user.novels.each do |novel| %>
+			<li>
+				<%= link_to novel.title, novel %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

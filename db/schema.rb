@@ -11,11 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202014809) do
+ActiveRecord::Schema.define(version: 20150203232923) do
+
+  create_table "chapters", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "novel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "chapters", ["novel_id"], name: "index_chapters_on_novel_id"
+  add_index "chapters", ["user_id"], name: "index_chapters_on_user_id"
 
   create_table "novels", force: :cascade do |t|
     t.string   "title"
     t.text     "summary"
+    t.string   "author"
+    t.boolean  "completed"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150202014809) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin",                  default: false
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

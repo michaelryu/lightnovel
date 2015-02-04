@@ -2,14 +2,10 @@
 
 one:
   title: MyString
-  summary: MyText
-  author: MyString
-  completed: false
-  user_id: 
+  content: MyText
+  novel_id: 
 
 two:
   title: MyString
-  summary: MyText
-  author: MyString
-  completed: false
-  user_id: 
+  content: MyText
+  novel_id: 
