@@ -1,6 +1,9 @@
 <p>Title: <%= @novel.title %></p>
 <p>Author: <%= @novel.author%></p>
 <p>Summary: <%= @novel.summary %></p>
+<p>Style Rating: <%= rating_for @novel, "style", disable_after_rate: true, imdb_avg: true, star: 10, enable_half: true, half_show: true %></p>
+<p>Story Rating: <%= rating_for @novel, "story", disable_after_rate: true, imdb_avg: true, star: 10, enable_half: true, half_show: true %></p>
+<p>Character Rating: <%= rating_for @novel, "character", disable_after_rate: true, imdb_avg: true, star: 10, enable_half: true, half_show: true %></p>
 <% if user_signed_in? %>
 	<% if current_user.voted_for? @novel %>
 		<%= link_to "Remove Bookmark", unlike_novel_path(@novel), method: :put  %>
