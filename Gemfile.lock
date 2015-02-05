@@ -5,6 +5,12 @@ GIT
     font-icons-rails (0.0.6)
       sass-rails (>= 3.1.1)
 
+GIT
+  remote: git://github.com/wazery/ratyrate.git
+  revision: 0fc6e995a508ff18022280b0ff77e91e5d3b6b8c
+  specs:
+    ratyrate (1.2.2.alpha)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -282,7 +288,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.4.2)
-    ratyrate (1.2.2.alpha)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -376,7 +381,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails-html-sanitizer
   rails_12factor
-  ratyrate
+  ratyrate!
   refills (= 0.0.2)
   ruby-beautify
   sass-rails

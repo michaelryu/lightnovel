@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   has_many :novels
   has_many :chapters
   validates :name, presence: true, uniqueness: true, length: { in: 4..20 }
+  acts_as_voter
 end

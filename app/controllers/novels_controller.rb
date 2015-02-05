@@ -38,6 +38,18 @@ class NovelsController < ApplicationController
 		end
 	end
 
+	def bookmark
+		@novel = Novel.find(params[:id])
+		@novel.liked_by current_user
+		redirect_to @novel
+	end
+
+	def removemark
+		@novel = Novel.find(params[:id])
+		@novel.unliked_by current_user
+		redirect_to @novel
+	end
+
 	private
 
 	def novel_params

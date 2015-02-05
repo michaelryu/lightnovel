@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   
   root "pages#home"
   resources :novels do
+    member do 
+      put "like", to: "novels#bookmark"
+      put "unlike", to: "novels#removemark"
+    end
   	resources :chapters
   end
+
 end

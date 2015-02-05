@@ -1,6 +1,8 @@
 <p>Username: <%= @user.name %></p>
-<p>Email: <%= @user.email %></p> 
-
+<p>Email: <%= @user.email %></p>
+<% @user.find_voted_items.each do |marked| %>
+	<%= link_to marked.author, marked  %>
+<% end %>
 <% if @user.novels.any? %>
 	<ul>
 		<% @user.novels.each do |novel| %>

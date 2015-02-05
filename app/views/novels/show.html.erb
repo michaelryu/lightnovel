@@ -1,6 +1,13 @@
 <p>Title: <%= @novel.title %></p>
 <p>Author: <%= @novel.author%></p>
 <p>Summary: <%= @novel.summary %></p>
+<% if user_signed_in? %>
+	<% if current_user.voted_for? @novel %>
+		<%= link_to "Remove Bookmark", unlike_novel_path(@novel), method: :put  %>
+	<% else %>
+		<%= link_to "Bookmark", like_novel_path(@novel), method: :put  %>
+	<% end %>
+<% end %>
 <% if current_user == @novel.user || current_user.try(:admin?) %>
   <%= link_to "Delete", @novel , method: :delete, data: { confirm: "Are you sure?" } %>
   <%= link_to "New Chapter", "#{@novel.id}/chapters/new"  %>

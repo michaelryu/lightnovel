@@ -5,4 +5,5 @@ class Novel < ActiveRecord::Base
   validates :title, presence: true, length: { in: 3..100 }, uniqueness: true
   validates :summary, presence: true, length: { minimum: 140 }
   validates :author, presence: true, length: { in: 2..50 }
+  acts_as_votable
 end
