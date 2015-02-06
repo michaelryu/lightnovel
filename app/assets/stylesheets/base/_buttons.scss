@@ -2,7 +2,7 @@
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
-  background-color: $action-color;
+  background-color: $orange;
   border-radius: $base-border-radius;
   border: none;
   color: #fff;
@@ -17,13 +17,11 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: darken($orange, 5%);
     color: #fff;
   }
-
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;

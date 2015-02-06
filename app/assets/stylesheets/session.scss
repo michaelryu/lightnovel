@@ -1,0 +1,22 @@
+.session {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  margin-top: 50px;
+  @include media($mobile) {
+    width: 330px;
+  }
+
+  h2 {
+    text-align: center;
+    color: $orange;
+    font-family: Lato;
+  }
+  a {
+    color: $orange;
+  }
+}
+
+.form-actions {
+  float: right;
+}

@@ -1,1 +1,11 @@
-<div>test</div>
+<% unless user_signed_in? %>
+<div id="banner">
+	<div id="intro">
+		<h1>Light Novel Archives</h1>
+		<p>Share, Read and Discuss the latest in Fiction</p>
+		<div id="signup">
+			<%= link_to "Sign Up", new_user_registration_path  %>
+		</div>
+	</div>
+</div>
+<% end %>

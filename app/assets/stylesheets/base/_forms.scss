@@ -14,13 +14,11 @@ select {
 }
 
 label {
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: $small-spacing / 2;
-
   &.required::after {
     content: "*";
   }
-
   abbr {
     display: none;
   }
@@ -32,7 +30,6 @@ textarea {
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -40,14 +37,11 @@ textarea {
   padding: $base-spacing / 3;
   transition: border-color;
   width: 100%;
-
   &:hover {
     border-color: darken($base-border-color, 10%);
   }
-
   &:focus {
-    border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
+    border-color: $orange;
     outline: none;
   }
 }
