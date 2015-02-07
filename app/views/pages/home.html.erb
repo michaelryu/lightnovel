@@ -8,4 +8,13 @@
 		</div>
 	</div>
 </div>
+<% else %>
+	<h1>Most Bookmarked</h1>
+	<% Novel.limit(3).each do |novel| %>
+	  <p><%= novel.title %></p>
+	<% end %>
+	<h1>Newest Update</h1>
+	<% Chapter.limit(3).each do |chapter| %>
+		<p><%= chapter.title %></p>
+	<% end %>
 <% end %>

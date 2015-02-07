@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207215801) do
+ActiveRecord::Schema.define(version: 20150207222523) do
 
   create_table "chapters", force: :cascade do |t|
     t.string   "title"
@@ -31,9 +31,10 @@ ActiveRecord::Schema.define(version: 20150207215801) do
     t.string   "author"
     t.boolean  "completed"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "picture"
+    t.integer  "cached_votes_total"
   end
 
   add_index "novels", ["user_id"], name: "index_novels_on_user_id"
