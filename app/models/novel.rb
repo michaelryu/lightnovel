@@ -5,6 +5,7 @@ class Novel < ActiveRecord::Base
   validates :title, presence: true, length: { in: 3..100 }, uniqueness: true
   validates :summary, presence: true, length: { minimum: 140 }
   validates :author, presence: true, length: { in: 2..50 }
+  mount_uploader :picture, PictureUploader
   acts_as_votable
   ratyrate_rateable "style", "story", "character"
 end

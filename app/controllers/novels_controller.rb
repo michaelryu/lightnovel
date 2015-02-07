@@ -18,7 +18,7 @@ class NovelsController < ApplicationController
 	def destroy
 		@novel = Novel.find(params[:id])
 		@novel.destroy
-		redirect_to user_path
+		redirect_to root_url
 	end
 
 	def show
@@ -53,7 +53,7 @@ class NovelsController < ApplicationController
 	private
 
 	def novel_params
-		params.require(:novel).permit(:title, :summary, :author, :user_id)
+		params.require(:novel).permit(:title, :summary, :author, :user_id, :picture)
 	end
 
 	def correct_user
