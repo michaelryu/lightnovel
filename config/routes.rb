@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   end
   
   root "pages#home"
+  get 'popular' => "pages#popular"
+  get 'newest' => "pages#newest"
+
   resources :novels do
     member do 
       put "like", to: "novels#bookmark"

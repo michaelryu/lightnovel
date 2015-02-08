@@ -1,7 +1,12 @@
+<div class="novel-form">
+<h2>New Novel</h2>
 <%= simple_form_for @novel do |f| %>
   <%= f.input :title, required: true, placeholder: "Coiling Dragon" %>
-  <%= f.input :summary, required: true %>
+  <%= f.input :summary, required: true, placeholder: "600 character limit" %>
   <%= f.input :author, required: true %>
   <%= f.input :picture, required: true %>
+  <div class="form-actions">
   <%= f.button :submit, "Publish Novel" %>
+  </div>
 <% end %>
+</div>

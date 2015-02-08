@@ -4,4 +4,5 @@ class Chapter < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 140 }
   validates :content, presence: true, length: { minimum: 140 }
   default_scope { order( created_at: :desc)}
+  
 end

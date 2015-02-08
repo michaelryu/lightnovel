@@ -1,29 +1,37 @@
-<p>Title: <%= @novel.title %></p>
-<p>Author: <%= @novel.author%></p>
-<p>Summary: <%= @novel.summary %></p>
-<%= image_tag @novel.picture.url %>
-<% if user_signed_in? %>
-	<% if current_user.voted_for? @novel %>
-		<%= link_to "Remove Bookmark", unlike_novel_path(@novel), method: :put  %>
-	<% else %>
-		<%= link_to "Bookmark", like_novel_path(@novel), method: :put  %>
-	<% end %>
-<% end %>
-<% if current_user == @novel.user || current_user.try(:admin?) %>
-  <%= link_to "Delete", @novel , method: :delete, data: { confirm: "Are you sure?" } %>
-  <%= link_to "New Chapter", "#{@novel.id}/chapters/new"  %>
-  <%= link_to "Edit Novel Information", edit_novel_path  %>
-<% end %>
-
-<% if @novel.chapters.any? %>
-	<ul>
-	<% @novel.chapters.each do |chapter| %>
-		<li>
-			<%= link_to chapter.title, [@novel, chapter]  %>
-			<% if current_user == @novel.user || current_user.try(:admin?) %>
-				<%= link_to "delete", [@novel, chapter], method: :delete, data: { confirm: "Are you sure?" }  %>
+<div class="novel-show">
+	<div class="novel-info">
+		<h1><span><%= @novel.title %></span>Author, <%= @novel.author%></h1>
+		<% if user_signed_in? %>
+			<% if current_user.voted_for? @novel %>
+				<div class="mark"><%= link_to "Remove Bookmark -", unlike_novel_path(@novel), method: :put  %></div>	
+			<% else %>
+				<div class="mark"><%= link_to "Bookmark +", like_novel_path(@novel), method: :put  %></div>	
 			<% end %>
-		</li>
+		<% end %>
+		<% if current_user == @novel.user || current_user.try(:admin?) %>
+			<div class="mark">
+			  <%= link_to "Delete", @novel , method: :delete, data: { confirm: "Are you sure?" } %>
+			  <%= link_to "New Chapter", "#{@novel.id}/chapters/new"  %>
+			  <%= link_to "Edit Novel Information", edit_novel_path  %>
+		  </div>
+		<% end %>
+		<p><%= @novel.summary %></p>
+	</div>
+	<%= image_tag @novel.picture.url %>
+	<div class="chapters">
+	<% if @novel.chapters.any? %>
+		<ul>
+		<% @novel.chapters.each do |chapter| %>
+			<li>
+				<%= link_to chapter.title, [@novel, chapter]  %>
+				<% if current_user == @novel.user || current_user.try(:admin?) %>
+					<%= link_to "Delete", [@novel, chapter], method: :delete, data: { confirm: "Are you sure?" }, class: "misc"  %>
+				<% end %>
+				<%= link_to "Edit", "#{chapter.novel.id}/chapters/#{chapter.id}/edit", class: "misc" %>
+				<p class= "date"><%= chapter.created_at.strftime("%Y-%m-%d") %></p>
+			</li>
+		<% end %>
+		</ul>
 	<% end %>
-	</ul>
-<% end %>
+	</div>
+</div>

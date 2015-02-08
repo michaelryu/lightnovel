@@ -1,0 +1,150 @@
+.novel-card {
+  background-color: white;
+  margin-bottom: 25px;
+  img {
+    display: block;
+    width: 100%;
+  }
+  a {
+    font-family: Lato;
+    font-size: 1.1em;
+    color: $orange;
+  }
+  h3 > a {
+    font-size: 0.8em;
+  }
+  @include media($mobile) {
+    img {
+      display: none;
+    }
+    @include span-columns(4);
+    .card-pic {
+      @include span-columns(4);
+    }
+    .card-info {
+      padding: 20px;
+      @include span-columns(4);
+      p > a {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  @include media($mediumgrid) {
+    @include span-columns(8);
+    .card-pic {
+      @include span-columns(2);
+    }
+    .update-pic > .card-info {
+      p {
+        padding-top: 20px;
+      }
+    }
+    .card-info {
+      padding: 20px;
+      @include span-columns(6);
+      p > a {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  @include media($largegrid) {
+    @include span-columns(12);
+    .card-pic {
+      @include span-columns(5);
+    }
+    .update-pic > .card-pic {
+      @include span-columns(2);
+    }
+    .update-pic > .card-info {
+      p {
+        padding-top: 20px;
+      }
+      @include span-columns(10);
+    }
+    .card-info {
+      @include span-columns(7);
+      p > a {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  @include media($maxgrid) {
+    @include span-columns(12);
+    .card-pic {
+      @include span-columns(5);
+    }
+    .card-info {
+      @include span-columns(7);
+      p > a {
+        font-size: 0.9em;
+      }
+    }
+    .update-pic > .card-pic {
+      @include span-columns(2);
+    }
+    .update-pic > .card-info {
+      p {
+        padding-top: 20px;
+      }
+      @include span-columns(10);
+    }
+  }
+}
+
+.user-b {
+  h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: Lato;
+  }
+}
+
+.user-show {
+  background-color: #f1f1f1;
+  padding: 30px 30px 0 30px;
+  h2 {
+    text-align: center;
+    font-family: Lato;
+    padding: 30px;
+    font-weight: 100;
+  }
+  @include outer-container;
+  @include media($mobile) {
+    .booked {
+      @include span-columns(4);
+    }
+    .yours {
+      @include span-columns(4);
+    }
+  }
+
+  @include media($mediumgrid) {
+    .booked {
+      @include span-columns(8);
+    }
+    .yours {
+      @include span-columns(8);
+    }
+  }
+
+  @include media($largegrid) {
+    .booked {
+      @include span-columns(6);
+    }
+    .yours {
+      @include span-columns(6);
+    }
+  }
+
+  @include media($maxgrid) {
+    .booked {
+      @include span-columns(6);
+    }
+    .yours {
+      @include span-columns(6);
+    }
+  }
+}

@@ -1,3 +1,106 @@
-// Place all the styles related to the Chapters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.chapter-show {
+  margin-left: auto;
+  margin-right: auto;
+  @include media($mobile) {
+    width: 90%;
+  }
+
+  @include media($mediumgrid) {
+    width: 85%;
+  }
+
+  @include media($largegrid) {
+    width: 800px;
+  }
+
+  @include media($maxgrid) {
+    width: 800px;
+  }
+
+  h2 {
+    margin: 50px;
+    text-align: center;
+    color: $orange;
+    font-family: Lato;
+  }
+  a {
+    color: $orange;
+  }
+  p {
+    white-space: pre-wrap;
+    font-family: Merriweather;
+    line-height: 2;
+    font-size: 1.1em;
+  }
+}
+
+.chapter-form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  .chap-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+  @include media($mobile) {
+    width: 90%;
+    .chap-title {
+      margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+    }
+    textarea {
+      min-height: 400px;
+    }
+  }
+
+  @include media($mediumgrid) {
+    width: 85%;
+    textarea {
+      min-height: 600px;
+    }
+  }
+
+  @include media($largegrid) {
+    width: 840px;
+    textarea {
+      min-height: 800px;
+    }
+  }
+
+  @include media($maxgrid) {
+    width: 840px;
+    textarea {
+      min-height: 1000px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: $orange;
+    font-family: Lato;
+  }
+  a {
+    color: $orange;
+  }
+  p {
+    font-weight: 300;
+  }
+  .input {
+    margin-top: 30px;
+  }
+}
+
+.form-actions {
+  margin-top: 10px;
+  float: right;
+}
+
+.novel-links {
+  text-align: center;
+  margin: 30px;
+  a {
+    margin: 10px;
+  }
+}

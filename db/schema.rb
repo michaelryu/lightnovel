@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207222523) do
+ActiveRecord::Schema.define(version: 20150208061624) do
 
   create_table "chapters", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,22 @@ ActiveRecord::Schema.define(version: 20150207222523) do
   add_index "chapters", ["novel_id"], name: "index_chapters_on_novel_id"
   add_index "chapters", ["user_id"], name: "index_chapters_on_user_id"
 
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
+
   create_table "novels", force: :cascade do |t|
     t.string   "title"
     t.text     "summary"
@@ -35,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150207222523) do
     t.datetime "updated_at",         null: false
     t.string   "picture"
     t.integer  "cached_votes_total"
+    t.datetime "last_chapter_at"
   end
 
   add_index "novels", ["user_id"], name: "index_novels_on_user_id"

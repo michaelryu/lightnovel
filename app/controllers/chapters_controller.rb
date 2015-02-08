@@ -24,6 +24,8 @@ class ChaptersController < ApplicationController
 
 	def show
 		@chapter = Chapter.find(params[:id])
+		@previous = Chapter.where("id < ?", params[:id]).order(:id).first   
+    @next = Chapter.where("id > ?", params[:id]).order(:id).first 
 	end
 
 	def edit

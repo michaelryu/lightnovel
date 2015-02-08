@@ -56,6 +56,10 @@ class NovelsController < ApplicationController
 		params.require(:novel).permit(:title, :summary, :author, :user_id, :picture)
 	end
 
+	def update_novel_last_chapter_at
+    self.novel.touch(:last_chapter_at) if self.novel
+  end
+
 	def correct_user
 		unless current_user.admin?
 			@novel = current_user.novels.find_by(id: params[:id])

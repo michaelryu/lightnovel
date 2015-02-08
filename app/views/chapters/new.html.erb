@@ -1,5 +1,10 @@
+<div class="chapter-form">
+<h2>New Chapter</h2>
 <%= simple_form_for([@novel, Chapter.new]) do |f| %>
-  <%= f.input :title, required: true, placeholder: "Volume 1, Chapter 4: Hot Summer Night" %>
-  <%= f.input :content, required: true %>
+  <div class="chap-title"><%= f.input :title, required: true, placeholder: "Volume 1, Chapter 4: Hot Summer Night", label: false %></div>	
+  <%= f.input :content, required: true, label: false %>
+  <div class="form-actions">
   <%= f.button :submit, "Publish Chapter" %>
+  </div>
 <% end %>
+</div>

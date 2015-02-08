@@ -1,5 +1,27 @@
-<p>Title: <%= @chapter.title %></p>
-<p>Content: <%= @chapter.content %></p>
-<% if current_user == @chapter.novel.user || current_user.try(:admin?) %>
-	<%= link_to "Edit", "#{@chapter.id}/edit" %>
-<% end %>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<div class="chapter-show">
+	<% if current_user == @chapter.novel.user || current_user.try(:admin?) %>
+		<%= link_to "Edit", "#{@chapter.id}/edit" %>
+	<% end %>
+	<h2><%= @chapter.title %></h2>
+	<div class="novel-links">
+		<% if @previous %>
+			<%= link_to " « Previous ", [@chapter.novel, @previous] %>
+		<% end %>
+		<%= link_to "[ Back to Novel ]", @chapter.novel  %>
+		<% if @next %>
+			<%= link_to " Next » ", [@chapter.novel, @next] %>
+		<% end %>
+	</div>	
+	<p><%= @chapter.content %></p>
+	<div class="novel-links">
+		<% if @previous %>
+			<%= link_to " « Previous ", [@chapter.novel, @previous] %>
+		<% end %>
+		<%= link_to "[ Back to Novel ]", @chapter.novel  %>
+		<% if @next %>
+			<%= link_to " Next » ", [@chapter.novel, @next] %>
+		<% end %>
+	</div>	
+</div>

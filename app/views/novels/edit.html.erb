@@ -1,6 +1,11 @@
+<div class="novel-form">
+<h2>Edit Novel</h2>
 <%= simple_form_for @novel do |f| %>
   <%= f.input :title, required: true, placeholder: "Coiling Dragon" %>
   <%= f.input :summary, required: true %>
   <%= f.input :author, required: true %>
+  <div class="form-actions">
   <%= f.button :submit, "Edit Novel Information" %>
+  </div>
 <% end %>
+</div>
