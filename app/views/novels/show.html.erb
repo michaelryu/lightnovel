@@ -26,8 +26,8 @@
 				<%= link_to chapter.title, [@novel, chapter]  %>
 				<% if current_user == @novel.user || current_user.try(:admin?) %>
 					<%= link_to "Delete", [@novel, chapter], method: :delete, data: { confirm: "Are you sure?" }, class: "misc"  %>
+					<%= link_to "Edit", "#{chapter.novel.id}/chapters/#{chapter.id}/edit", class: "misc" %>
 				<% end %>
-				<%= link_to "Edit", "#{chapter.novel.id}/chapters/#{chapter.id}/edit", class: "misc" %>
 				<p class= "date"><%= chapter.created_at.strftime("%Y-%m-%d") %></p>
 			</li>
 		<% end %>

@@ -1,3 +1,11 @@
+.paginate {
+  text-align: center;
+  font-family: Lato;
+  a {
+    color: $orange;
+  }
+}
+
 .novel-show {
   img {
     display: block;
@@ -28,6 +36,7 @@
 
 .novel-info {
   background-color: $orange;
+  h3 {}
   a {
     border: 1px solid white;
     border-radius: 5px;

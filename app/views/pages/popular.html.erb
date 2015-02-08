@@ -1,0 +1,27 @@
+<div class="user-show">
+<h2>Most Popular</h2>
+<ul>
+	<% @updates.each do |novel| %>
+		<li>
+			<div class="novel-card">
+			<div class="update-pic">
+				<div class="card-pic">
+				<%= link_to image_tag(novel.picture.url), novel %>
+				</div>
+				<div class="card-info">
+				<%= link_to novel.title, novel %>
+				<p><%= truncate_html novel.summary, length: 220 %>
+    			<% if novel.summary.length > 220 %>
+      		<%= link_to "Read More »", novel %></p>
+				<% end %>
+				<% if novel.chapters.any? %>
+				<h3><%= link_to "#{novel.chapters.first.title}", [novel, novel.chapters.first] %></h3>	
+			<% end %>
+				</div>
+				</div>
+			</div>
+		</li>
+		<div class="paginate"><%= will_paginate @updates, previous_label: "<", next_label: ">" %></div>
+	<% end %>
+	</ul>
+	</div>

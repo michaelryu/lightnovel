@@ -2,7 +2,14 @@
 
 #banner {
   width: 100%;
-  background-color: $orange;
+  background: rgba(247, 182, 52, 1);
+  background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.69)), color-stop(100%, rgba(230, 126, 34, 0.69)));
+  background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
+  background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
+  background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
+  background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b634', endColorstr='#e67e22', GradientType=1 );
   @include media($mobile) {
     min-height: 300px;
   }

@@ -1,6 +1,6 @@
 class NovelsController < ApplicationController
 	before_action :authenticate_user!, only: [:create, :destroy, :update, :edit]
-	before_action :correct_user, only: :destroy
+	before_action :correct_user, only: [:destroy, :update, :edit]
 
 	def new
 		@novel = Novel.new

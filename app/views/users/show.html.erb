@@ -1,52 +1,17 @@
 <div class="user-b">
 <div class="user-show">
-
 <section class="booked">
 	<h2>Bookmarked Novels</h2>
 	<ul>
-		<% @user.find_voted_items.each do |marked| %>
-		<li>
-			<div class="novel-card">
-				<div class="card-pic">
-				<%= link_to image_tag(marked.picture.url), marked %>
-				</div>
-				<div class="card-info">
-				<%= link_to marked.title, marked  %>
-				<p><%= truncate_html marked.summary, length: 220 %>
-    			<% if marked.summary.length > 220 %>
-      		<%= link_to "Read More »", marked %></p>
-  			<% end %>
-  			<% if marked.chapters.any? %>
-  				<h3><%= link_to "#{marked.chapters.first.title}", [marked, marked.chapters.first] %></h3>	
-  			<% end %>
-  			</div>
-			</div>
-		</li> 
-	<% end %>
+		<% @unovel = @user.get_voted Novel.includes(:chapters).order("chapters.created_at desc") %>
+		<%= render 'shared/unovel' %>
 	</ul>
 </section>
 <section class="yours">
 	<h2><%= @user.name %>'s Novels</h2>
 	<ul>
-		<% @user.novels.each do |novel| %>
-			<li>
-				<div class="novel-card">
-					<div class="card-pic">
-					<%= link_to image_tag(novel.picture.url), novel %>
-					</div>
-					<div class="card-info">
-					<%= link_to novel.title, novel %>
-					<p><%= truncate_html novel.summary, length: 220 %>
-	    			<% if novel.summary.length > 220 %>
-	      		<%= link_to "Read More »", novel %></p>
-  				<% end %>
-  				<% if novel.chapters.any? %>
-  				<h3><%= link_to "#{novel.chapters.first.title}", [novel, novel.chapters.first] %></h3>	
-  			<% end %>
-  				</div>
-				</div>
-			</li>
-		<% end %>
+		<% @unovel = @user.novels %>
+		<%= render 'shared/unovel' %>
 	</ul>
 </section>
 </div>

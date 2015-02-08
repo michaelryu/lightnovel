@@ -12,34 +12,9 @@
 	<div class="user-show">
 	<h2>Feed</h2>
 	<ul>
-	<% @updates = Novel.includes(:chapters).order("chapters.created_at desc") %>
-		<% @updates.each do |update| %>
-		<li>
-			<div class="novel-card">
-			<div class="update-pic">
-				<div class="card-pic">
-				<%= link_to image_tag(update.picture.url), update %>
-				</div>
-
-				<div class="card-info">
-				<% if update.chapters.any? %>
-  				<%= link_to "#{update.title}: #{update.chapters.first.title}", [update, update.chapters.first] %>
-  				<p><%= truncate_html update.chapters.first.content, length: 400 %>
-    			<% if update.chapters.first.content.length > 400 %>
-      		<%= link_to "Read More »", [update, update.chapters.first] %></p>
-  			<% end %>
-  			<% else %>
-  				<%= link_to update.title, update %>
-  				<p>No chapters</p>
-  			<% end %>
-				
-  			
-  			</div>
-  			</div>
-			</div>
-		</li> 
-		<% end %>
+		<%= render @updates %>
 	</ul>
+	<div class="paginate"><%= will_paginate @updates, previous_label: "<", next_label: ">" %></div>
 	</div>
 	<% if current_user.admin? %>
 		<h1>Most Bookmark</h1>
