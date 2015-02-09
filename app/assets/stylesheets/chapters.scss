@@ -1,24 +1,37 @@
+.nightmode > .chapter-show {
+  background-color: black;
+  p {
+    color: gray;
+  }
+}
+
 .chapter-show {
+  padding-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   @include media($mobile) {
-    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   @include media($mediumgrid) {
-    width: 85%;
+    padding-left: 12%;
+    padding-right: 12%;
   }
 
   @include media($largegrid) {
-    width: 800px;
+    padding-left: 20%;
+    padding-right: 20%;
   }
 
   @include media($maxgrid) {
-    width: 800px;
+    padding-left: 28%;
+    padding-right: 28%;
   }
 
   h2 {
-    margin: 50px;
+    padding-top: 50px;
     text-align: center;
     color: $orange;
     font-family: Lato;
@@ -27,6 +40,7 @@
     color: $orange;
   }
   p {
+    padding-top: 40px;
     white-space: pre-wrap;
     font-family: Merriweather;
     line-height: 2;
@@ -38,6 +52,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  margin-bottom: 100px;
   .chap-title {
     margin-left: auto;
     margin-right: auto;

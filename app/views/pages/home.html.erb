@@ -40,21 +40,11 @@
 </div>
 <% else %>
 	<div class="user-show">
-	<h2>Feed</h2>
+	<h2>Your Feed</h2>
 	<ul>
 		<%= render @updates %>
 	</ul>
 	<div class="paginate"><%= will_paginate @updates, previous_label: "<", next_label: ">" %></div>
 	</div>
-	<% if current_user.admin? %>
-		<h1>Most Bookmark</h1>
-	<% Novel.limit(3).each do |novel| %>
-	  <p><%= link_to novel.title, novel %></p>
-	<% end %>
-	<h1>Newest Update</h1>
-	<% Chapter.limit(3).each do |chapter| %>
-		<p><%= link_to chapter.title, [chapter.novel, chapter] %></p>
-	<% end %>
-	<% end %>
 <% end %>
 

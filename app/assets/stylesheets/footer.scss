@@ -6,12 +6,45 @@
 .boot {
   width: 100%;
   background-color: #f1f1f1;
-  height: 80px;
+  padding: 35px;
+  text-align: center;
+  a {
+    font-family: Lato;
+    color: $orange;
+  }
 }
 
 .linkss {
+  padding: 70px 0 70px 0;
+  text-align: center;
+  ul > li {
+    display: inline;
+    a {
+      color: white;
+      font-family: Lato;
+      font-size: 1.1em;
+      @include media($mobile) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      @include media($mediumgrid) {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+
+      @include media($largegrid) {
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+
+      @include media($maxgrid) {
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+    }
+  }
   width: 100%;
-  height: 160px;
   background: rgba(233, 137, 53, 0.78);
   background: -moz-linear-gradient(left, rgba(233, 137, 53, 0.78) 0%, rgba(233, 137, 53, 0.77) 0%, rgba(233, 137, 53, 0.77) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(233, 137, 53, 0.78)), color-stop(0%, rgba(233, 137, 53, 0.77)), color-stop(100%, rgba(233, 137, 53, 0.77)));
