@@ -1,14 +1,90 @@
-.update-card {}
+#sign-banner {
+  background: rgba(211, 84, 0, 0.69);
+  background: -moz-linear-gradient(left, rgba(211, 84, 0, 0.69) 0%, rgba(211, 84, 0, 0.68) 0%, rgba(211, 84, 0, 0.68) 8%, rgba(243, 156, 18, 0.68) 83%, rgba(243, 156, 18, 0.68) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(211, 84, 0, 0.69)), color-stop(0%, rgba(211, 84, 0, 0.68)), color-stop(8%, rgba(211, 84, 0, 0.68)), color-stop(83%, rgba(243, 156, 18, 0.68)), color-stop(100%, rgba(243, 156, 18, 0.68)));
+  background: -webkit-linear-gradient(left, rgba(211, 84, 0, 0.69) 0%, rgba(211, 84, 0, 0.68) 0%, rgba(211, 84, 0, 0.68) 8%, rgba(243, 156, 18, 0.68) 83%, rgba(243, 156, 18, 0.68) 100%);
+  background: -o-linear-gradient(left, rgba(211, 84, 0, 0.69) 0%, rgba(211, 84, 0, 0.68) 0%, rgba(211, 84, 0, 0.68) 8%, rgba(243, 156, 18, 0.68) 83%, rgba(243, 156, 18, 0.68) 100%);
+  background: -ms-linear-gradient(left, rgba(211, 84, 0, 0.69) 0%, rgba(211, 84, 0, 0.68) 0%, rgba(211, 84, 0, 0.68) 8%, rgba(243, 156, 18, 0.68) 83%, rgba(243, 156, 18, 0.68) 100%);
+  background: linear-gradient(to right, rgba(211, 84, 0, 0.69) 0%, rgba(211, 84, 0, 0.68) 0%, rgba(211, 84, 0, 0.68) 8%, rgba(243, 156, 18, 0.68) 83%, rgba(243, 156, 18, 0.68) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d35400', endColorstr='#f39c12', GradientType=1 );
+  text-align: center;
+  @include media($mobile) {
+    h1 {
+      padding: 30px;
+      font-size: 1.2em;
+    }
+  }
+
+  @include media($mediumgrid) {
+    h1 {
+      padding: 60px;
+      font-size: 1.6em;
+    }
+  }
+
+  @include media($largegrid) {
+    h1 {
+      padding: 120px;
+      font-size: 2.3em;
+    }
+  }
+
+  @include media($maxgrid) {
+    h1 {
+      padding: 120px;
+      font-size: 2.3em;
+    }
+  }
+
+  h1 {
+    font-family: Lato;
+    font-weight: 300;
+    color: white;
+    line-height: 1.5;
+    max-width: 95%;
+  }
+}
+
+#update-banner {
+  margin-top: -27px;
+  h2 {
+    padding-bottom: 1em;
+    font-family: Lato;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+  img {
+    padding-bottom: 10px;
+  }
+  h3 > a {
+    font-size: 1.1em;
+  }
+  a {
+    color: $orange;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 0.9em;
+  }
+  background-color: #f1f1f1;
+  @include outer-container;
+  padding: 40px 10px 20px 10px;
+  max-width: 100%;
+  text-align: center;
+  li {
+    @include span-columns(3);
+    @include omega(4n);
+  }
+}
 
 #banner {
   width: 100%;
-  background: rgba(247, 182, 52, 1);
-  background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.69)), color-stop(100%, rgba(230, 126, 34, 0.69)));
-  background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
-  background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
-  background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
-  background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.69) 0%, rgba(230, 126, 34, 0.69) 100%);
+  background: rgba(247, 182, 52, 1), image-url("covers.png");
+  background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76))), image-url("covers.png");
+  background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+  background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+  background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+  background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b634', endColorstr='#e67e22', GradientType=1 );
   @include media($mobile) {
     min-height: 300px;

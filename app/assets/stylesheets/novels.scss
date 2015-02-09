@@ -7,6 +7,7 @@
 }
 
 .novel-show {
+  margin-bottom: 20px;
   img {
     display: block;
     position: absolute;
@@ -35,7 +36,14 @@
 }
 
 .novel-info {
-  background-color: $orange;
+  background: rgba(247, 182, 52, 1);
+  background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76)));
+  background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%);
+  background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%);
+  background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%);
+  background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b634', endColorstr='#e67e22', GradientType=1 );
   h3 {}
   a {
     border: 1px solid white;
@@ -47,6 +55,7 @@
   p {
     color: white;
     padding-top: 20px;
+    font-size: 1.1em;
   }
   h1 {
     color: white;
@@ -174,12 +183,15 @@
     .mark {
       margin-top: 30px;
     }
+    p {
+      font-size: 1em;
+    }
     a {
       padding: 8px 16px 8px 16px;
       font-size: 1em;
     }
     h1 {
-      font-size: 1.1em;
+      font-size: 1em;
       span {
         font-size: 3.3em;
         margin-right: 20px;
@@ -209,9 +221,12 @@
   }
   .novel-info {
     height: 450px;
-    padding: 40px 40px 0 360px;
+    padding: 30px 40px 0 360px;
     .mark {
       margin-top: 30px;
+    }
+    p {
+      font-size: 1.2em;
     }
     a {
       padding: 8px 16px 8px 16px;
@@ -251,6 +266,21 @@
   }
   textarea {
     min-height: 300px;
+  }
+  @include media($mobile) {
+    margin-bottom: 15em;
+  }
+
+  @include media($mediumgrid) {
+    margin-bottom: 40em;
+  }
+
+  @include media($largegrid) {
+    margin-bottom: 43em;
+  }
+
+  @include media($maxgrid) {
+    margin-bottom: 43em;
   }
 }
 

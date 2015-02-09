@@ -18,6 +18,21 @@
   p {
     font-weight: 300;
   }
+  @include media($mobile) {
+    margin-bottom: 15em;
+  }
+
+  @include media($mediumgrid) {
+    margin-bottom: 40em;
+  }
+
+  @include media($largegrid) {
+    margin-bottom: 43em;
+  }
+
+  @include media($maxgrid) {
+    margin-bottom: 43em;
+  }
 }
 
 .form-actions {

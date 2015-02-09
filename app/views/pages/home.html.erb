@@ -8,6 +8,36 @@
 		</div>
 	</div>
 </div>
+<div id="update-banner">
+	<h2>Latest Updated <%= link_to "  »", newest_path %></h2>
+	<ul>
+	<% @unovel.limit(4).each do |novel| %>
+	<li>
+		<%= link_to image_tag(novel.picture.url), novel %>
+		<h3><%= link_to novel.title, novel %></h3>	
+		<% if novel.chapters.any? %>
+		<%= link_to "#{novel.chapters.first.title}", [novel, novel.chapters.first] %>
+		<% end %>
+	</li>
+	<% end %>
+	</ul>
+</div>
+<div id="sign-banner">
+	<div id="into">
+		<h1>Create an account to be able to share your own novels and bookmark others'.</h1>
+	</div>
+</div>
+<div id="update-banner">
+	<h2>Most Popular <%= link_to "  »", popular_path %></h2>
+	<ul>
+	<% Novel.limit(4).each do |novel| %>
+	<li>
+		<%= link_to image_tag(novel.picture.url), novel %>
+		<h3><%= link_to novel.title, novel %></h3>	
+	</li>
+	<% end %>
+	</ul>
+</div>
 <% else %>
 	<div class="user-show">
 	<h2>Feed</h2>
