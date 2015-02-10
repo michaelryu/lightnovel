@@ -40,12 +40,14 @@ class NovelsController < ApplicationController
 
 	def bookmark
 		@novel = Novel.find(params[:id])
+		@novel.record_timestamps = false
 		@novel.liked_by current_user
 		redirect_to @novel
 	end
 
 	def removemark
 		@novel = Novel.find(params[:id])
+		@novel.record_timestamps = false
 		@novel.unliked_by current_user
 		redirect_to @novel
 	end
