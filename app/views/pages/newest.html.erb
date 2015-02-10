@@ -1,6 +1,6 @@
 <div class="user-show">
 <h2>Latest Updates</h2>
-<% if @updates.any? %>
+<% if @updater.any? %>
 	<ul>
 		<% @updates.each do |update| %>
 		<li>
@@ -27,6 +27,6 @@
 		</li> 
 		<% end %>
 	</ul>
-	<div class="paginate"><%= will_paginate @updates, previous_label: "<", next_label: ">" %></div>
+	<div class="paginate"><%= will_paginate @updater, previous_label: "<", next_label: ">" %></div>
 <% end %>
 </div>
