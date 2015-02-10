@@ -1,7 +1,7 @@
 <div class="user-show">
 <h2>Most Popular</h2>
 <ul>
-	<% @updates.each do |novel| %>
+	<% @popular.each do |novel| %>
 		<li>
 			<div class="novel-card">
 			<div class="update-pic">
@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		</li>
-		<div class="paginate"><%= will_paginate @updates, previous_label: "<", next_label: ">" %></div>
 	<% end %>
+	<div class="paginate"><%= will_paginate @popular, previous_label: "<", next_label: ">" %></div>
 	</ul>
 	</div>
