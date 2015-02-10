@@ -8,7 +8,11 @@ class NovelsController < ApplicationController
 
 	def create
 		@novel = current_user.novels.build(novel_params)
-		
+		if @novel.save
+			redirect_to novel_url(@novel)
+		else
+			redirect_to "/novels/new"
+		end
 	end
 
 	def destroy
