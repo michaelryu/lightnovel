@@ -7,6 +7,10 @@ class PictureUploader < CarrierWave::Uploader::Base
   process resize_to_fit: [300, 450]
   process resize_to_fill: [300, 450]
 
+  version :thumb do
+    process resize_to_fill: [150, 225]
+  end
+
   if Rails.env.production?
     storage :fog
   else

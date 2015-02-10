@@ -3,9 +3,8 @@
   <div class="novel-card">
   <div class="update-pic">
     <div class="card-pic">
-    <%= link_to image_tag(update.picture.url), update %>
+    <%= link_to image_tag(update.picture.thumb.url), update %>
     </div>
-
     <div class="card-info">
     <% if update.chapters.any? %>
       <%= link_to "#{update.title}: #{update.chapters.first.title}", [update, update.chapters.first] %>
