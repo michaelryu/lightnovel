@@ -65,9 +65,10 @@
 		    </div>
 		  </div>
 		</li> 
+		<div class="paginate"><%= will_paginate @updated, previous_label: "<", next_label: ">" %></div>
 		<% end %>
 	</ul>
-	<div class="paginate"><%= will_paginate @updated, previous_label: "<", next_label: ">" %></div>
+	
 	</div>
 <% end %>
 
