@@ -2,6 +2,10 @@
 <h2>New Chapter</h2>
 <%= simple_form_for([@novel, Chapter.new]) do |f| %>
   <div class="chap-title"><%= f.input :title, required: true, placeholder: "Volume 1, Chapter 4: Hot Summer Night", label: "Maximum of 140 characters" %></div>	
+  <p><b>Bold:</b> &lt;b&gtChocolate&lt;/b&gt</p>
+  <p><b>Italics:</b> &lt;i&gtChocolate&lt;/i&gt</p>
+  <p><b>Add an image:</b> &lt;img src="https://i.imgur.com/s7tOH.jpg"&gt</p>
+  <%= link_to "More", "http://www.webmonkey.com/2010/02/html_cheatsheet/", target: "_blank"  %>
   <%= f.input :content, required: true, placeholder: "The text will be html_safe", label: false %>
   <div class="form-actions">
   <%= f.button :submit, "Publish Chapter" %>
