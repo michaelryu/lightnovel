@@ -6,7 +6,7 @@
 		<%= link_to "Edit", "#{@chapter.id}/edit" %>
 		<%= link_to "Delete", [@chapter.novel, @chapter], method: :delete, data: { confirm: "Are you sure?"} %>
 	<% end %>
-	<h2><%= @chapter.title %></h2>
+	<h2><%= @chapter.novel.title %>: <%= @chapter.title %></h2>
 	<div class="novel-links">
 		<% if @chapter.previous %>
 			<%= link_to " « Previous ", [@chapter.novel, @chapter.previous] %>
@@ -34,7 +34,7 @@
 		<%= link_to "Edit", "#{@chapter.id}/edit" %>
 		<%= link_to "Delete", [@chapter.novel, @chapter], method: :delete, data: { confirm: "Are you sure?"} %>
 	<% end %>
-	<h2><%= @chapter.title %></h2>
+	<h2><%= @chapter.novel.title %>: <%= @chapter.title %></h2>
 	<div class="novel-links">
 		<% if @chapter.previous %>
 			<%= link_to " « Previous ", [@chapter.novel, @chapter.previous] %>
