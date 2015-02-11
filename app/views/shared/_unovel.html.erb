@@ -6,8 +6,8 @@
 		</div>
 		<div class="card-info">
 		<%= link_to novel.title, novel %>
-		<p><%= truncate_html novel.summary, length: 220 %>
-			<% if novel.summary.length > 220 %>
+		<p><%= truncate_html novel.summary, length: 180 %>
+			<% if novel.summary.length > 180 %>
   		<%= link_to "Read More »", novel %></p>
 		<% end %>
 		<% if novel.chapters.any? %>

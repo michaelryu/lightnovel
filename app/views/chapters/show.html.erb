@@ -4,6 +4,7 @@
 	<div class="chapter-show">
 	<% if current_user == @chapter.novel.user || current_user.try(:admin?) %>
 		<%= link_to "Edit", "#{@chapter.id}/edit" %>
+		<%= link_to "Delete", [@chapter.novel, @chapter], method: :delete, data: { confirm: "Are you sure?"} %>
 	<% end %>
 	<h2><%= @chapter.title %></h2>
 	<div class="novel-links">
@@ -31,6 +32,7 @@
 <div class="chapter-show">
 	<% if current_user == @chapter.novel.user || current_user.try(:admin?) %>
 		<%= link_to "Edit", "#{@chapter.id}/edit" %>
+		<%= link_to "Delete", [@chapter.novel, @chapter], method: :delete, data: { confirm: "Are you sure?"} %>
 	<% end %>
 	<h2><%= @chapter.title %></h2>
 	<div class="novel-links">

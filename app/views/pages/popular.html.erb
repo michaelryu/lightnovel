@@ -6,17 +6,19 @@
 			<div class="novel-card">
 			<div class="update-pic">
 				<div class="card-pic">
-				<%= link_to image_tag(novel.picture.url), novel %>
+				<%= link_to image_tag(novel.picture.thumb.url), novel %>
 				</div>
 				<div class="card-info">
 				<%= link_to novel.title, novel %>
-				<p><%= truncate_html novel.summary, length: 220 %>
-    			<% if novel.summary.length > 220 %>
+				<p><%= truncate_html novel.summary, length: 400 %>
+    			<% if novel.summary.length > 400 %>
       		<%= link_to "Read More »", novel %></p>
 				<% end %>
 				<% if novel.chapters.any? %>
-				<h3><%= link_to "#{novel.chapters.first.title}", [novel, novel.chapters.first] %></h3>	
-			<% end %>
+      			<h5 class="timestamp">Updated <%= time_ago_in_words(novel.updated_at) %>ago</h5>
+      		<% else %>
+      			<h5 class="timestamp">Created <%= time_ago_in_words(novel.created_at) %>ago</h5>
+      		<% end %>
 				</div>
 				</div>
 			</div>

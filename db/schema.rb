@@ -47,10 +47,10 @@ ActiveRecord::Schema.define(version: 20150209013820) do
     t.string   "author"
     t.boolean  "completed"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "picture"
-    t.integer  "cached_votes_total"
+    t.integer  "cached_votes_total", default: 0
     t.datetime "last_chapter_at"
   end
 

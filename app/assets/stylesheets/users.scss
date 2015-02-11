@@ -12,6 +12,7 @@
   }
   h3 > a {
     font-size: 0.8em;
+    margin-top: -10px;
   }
   @include media($mobile) {
     img {
@@ -23,6 +24,9 @@
     }
     .card-info {
       padding: 20px;
+      p {
+        margin-bottom: 0;
+      }
       @include span-columns(4);
       p > a {
         font-size: 0.9em;

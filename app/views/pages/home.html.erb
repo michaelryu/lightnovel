@@ -49,17 +49,19 @@
 		    <div class="card-pic">
 		    <%= link_to image_tag(update.picture.thumb.url), update %>
 		    </div>
-
 		    <div class="card-info">
 		    <% if update.chapters.any? %>
 		      <%= link_to "#{update.title}: #{update.chapters.first.title}", [update, update.chapters.first] %>
+
 		      <p><%= truncate_html update.chapters.first.content, length: 400 %>
 		      <% if update.chapters.first.content.length > 400 %>
 		      <%= link_to "Read More »", [update, update.chapters.first] %></p>
 		    <% end %>
+		    <h5 class="timestamp">Updated <%= time_ago_in_words(update.updated_at) %>ago</h5>
 		    <% else %>
 		      <%= link_to update.title, update %>
 		      <p>No chapters</p>
+		      <h5 class="timestamp">Created <%= time_ago_in_words(update.created_at) %>ago</h5>
 		    <% end %>
 		    </div>
 		    </div>

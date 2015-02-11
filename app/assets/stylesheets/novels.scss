@@ -1,3 +1,13 @@
+.timestamp {
+  text-align: right;
+  font-family: Lato;
+  color: gray;
+  font-weight: 300;
+  margin-top: -15px;
+  font-size: 0.8em;
+  padding-right: 13px;
+}
+
 .paginate {
   text-align: center;
   font-family: Lato;
@@ -33,6 +43,10 @@
       }
     }
   }
+}
+
+.notice {
+  padding-top: 70px;
 }
 
 .novel-info {
