@@ -6,7 +6,7 @@
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :name, required: true %>
+    <%= f.input :name, required: true, placeholder: "4 to 20 characters" %>
     <%= f.input :password, required: true, placeholder: ("#{@minimum_password_length} characters minimum" if @validatable) %>
     <%= f.input :password_confirmation, required: true %>
     <%= f.input :nightmode, required: true, hint: "You can change this anytime in your profile settings." %>

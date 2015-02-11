@@ -1,19 +1,19 @@
 <div id="header">
   <%= link_to "LNA: Home", root_path, class: "logo" %>
   <ul id="menu">
-    <% if  user_signed_in? %>
     <li class="has-sub"><%= link_to "Novels", "#" %>
       <ul>
-      	<li><%= link_to "Latest Updates", newest_path %></li>
-				<li><%= link_to "Most Popular", popular_path %></li>
-				<li><%= link_to "New Novel", "/novels/new" %></li>
+        <li><%= link_to "Latest Updates", newest_path %></li>
+        <li><%= link_to "Most Popular", popular_path %></li>
       </ul>
-   	</li>
+    </li>
+    <% if  user_signed_in? %>
     <li class="has-sub"><%= link_to "User", "#" %>
       <ul class ="prof">
       	<li><%= link_to "Profile", user_path(current_user) %></li> 
-         <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-         <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+        <li><%= link_to "New Novel", "/novels/new" %></li>
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
       </ul>
    	</li>
 	<% else %>

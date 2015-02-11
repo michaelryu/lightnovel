@@ -11,6 +11,10 @@ class PictureUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [150, 225]
   end
 
+  def default_url
+    'default.png'
+  end
+
   if Rails.env.production?
     storage :fog
   else

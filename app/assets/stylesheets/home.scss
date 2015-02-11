@@ -78,28 +78,49 @@
 
 #banner {
   width: 100%;
-  background: rgba(247, 182, 52, 1), image-url("covers.png");
-  background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76))), image-url("covers.png");
-  background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
-  background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
-  background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
-  background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b634', endColorstr='#e67e22', GradientType=1 );
   @include media($mobile) {
     min-height: 300px;
+    background: rgba(247, 182, 52, 1), image-url("coversmall.png");
+    background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmall.png");
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76))), image-url("coversmall.png");
+    background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmall.png");
+    background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmall.png");
+    background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmall.png");
+    background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmall.png");
   }
 
   @include media($mediumgrid) {
     min-height: 400px;
+    background: rgba(247, 182, 52, 1), image-url("coversmed.png");
+    background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmed.png");
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76))), image-url("coversmed.png");
+    background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmed.png");
+    background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmed.png");
+    background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmed.png");
+    background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("coversmed.png");
   }
 
   @include media($largegrid) {
     min-height: 600px;
+    background: rgba(247, 182, 52, 1), image-url("covers.png");
+    background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76))), image-url("covers.png");
+    background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
   }
 
   @include media($maxgrid) {
     min-height: 800px;
+    background: rgba(247, 182, 52, 1), image-url("covers.png");
+    background: -moz-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247, 182, 52, 1)), color-stop(0%, rgba(247, 182, 52, 0.76)), color-stop(70%, rgba(230, 126, 34, 0.76))), image-url("covers.png");
+    background: -webkit-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: -o-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: -ms-linear-gradient(left, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
+    background: linear-gradient(to right, rgba(247, 182, 52, 1) 0%, rgba(247, 182, 52, 0.76) 0%, rgba(230, 126, 34, 0.76) 70%), image-url("covers.png");
   }
 }
 
