@@ -18,7 +18,7 @@ summary = "Test " * 120
       author: "AuthorL #{n}"
     ).tap do |novel|
     		(1..6).each do |i|
-          content = Faker::Lorem.paragraphs(rand(50)).join("\n")
+          content = Faker::Lorem.paragraphs(rand(50..100)).join("\n")
     			novel.chapters.create(
     					title: "Volume: 1, Chapter: #{i}",
     					content: content,

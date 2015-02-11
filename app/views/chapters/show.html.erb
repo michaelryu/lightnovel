@@ -8,22 +8,22 @@
 	<% end %>
 	<h2><%= @chapter.title %></h2>
 	<div class="novel-links">
-		<% if @previous %>
-			<%= link_to " « Previous ", [@chapter.novel, @previous] %>
+		<% if @chapter.previous %>
+			<%= link_to " « Previous ", [@chapter.novel, @chapter.previous] %>
 		<% end %>
 		<%= link_to "[ Back to Novel ]", @chapter.novel  %>
-		<% if @next %>
-			<%= link_to " Next » ", [@chapter.novel, @next] %>
+		<% if @chapter.next %>
+			<%= link_to " Next » ", [@chapter.novel, @chapter.next] %>
 		<% end %>
 	</div>	
 	<p><%= @chapter.content.html_safe %></p>
 	<div class="novel-links">
-		<% if @previous %>
-			<%= link_to " « Previous ", [@chapter.novel, @previous] %>
+		<% if @chapter.previous %>
+			<%= link_to " « Previous ", [@chapter.novel, @chapter.previous] %>
 		<% end %>
 		<%= link_to "[ Back to Novel ]", @chapter.novel  %>
-		<% if @next %>
-			<%= link_to " Next » ", [@chapter.novel, @next] %>
+		<% if @chapter.next %>
+			<%= link_to " Next » ", [@chapter.novel, @chapter.next] %>
 		<% end %>
 	</div>	
 </div>
@@ -36,23 +36,45 @@
 	<% end %>
 	<h2><%= @chapter.title %></h2>
 	<div class="novel-links">
-		<% if @previous %>
-			<%= link_to " « Previous ", [@chapter.novel, @previous] %>
+		<% if @chapter.previous %>
+			<%= link_to " « Previous ", [@chapter.novel, @chapter.previous] %>
 		<% end %>
 		<%= link_to "[ Back to Novel ]", @chapter.novel  %>
-		<% if @next %>
-			<%= link_to " Next » ", [@chapter.novel, @next] %>
+		<% if @chapter.next %>
+			<%= link_to " Next » ", [@chapter.novel, @chapter.next] %>
 		<% end %>
 	</div>	
 	<p><%= @chapter.content.html_safe %></p>
 	<div class="novel-links">
-		<% if @previous %>
-			<%= link_to " « Previous ", [@chapter.novel, @previous] %>
+		<% if @chapter.previous %>
+			<%= link_to " « Previous ", [@chapter.novel, @chapter.previous] %>
 		<% end %>
 		<%= link_to "[ Back to Novel ]", @chapter.novel  %>
-		<% if @next %>
-			<%= link_to " Next » ", [@chapter.novel, @next] %>
+		<% if @chapter.next %>
+			<%= link_to " Next » ", [@chapter.novel, @chapter.next] %>
 		<% end %>
 	</div>	
 </div>
 <% end %>
+<div class="chapter-show">
+	<button class="show-comments">Load Comments</button>
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+		    $('.show-comments').on('click', function(){
+	          var disqus_shortname = 'lightnovelarchives'; // Replace this value with *your* username.
+		 
+	          // ajax request to load the disqus javascript
+	          $.ajax({
+	                  type: "GET",
+	                  url: "http://" + disqus_shortname + ".disqus.com/embed.js",
+	                  dataType: "script",
+	                  cache: true
+	          });
+	          // hide the button once comments load
+	          $(this).fadeOut();
+				    });
+				});
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>  
+</div>
