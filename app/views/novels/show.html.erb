@@ -1,6 +1,6 @@
 <div class="novel-show">
 	<div class="novel-info">
-		<h1><span><%= @novel.title %></span>Author, <%= @novel.author%> <i>Posted by, <%= @novel.user.name %></i></h1>
+		<h1><span><%= @novel.title %></span>Author, <%= @novel.author%> <i>Posted by, <%= link_to @novel.user.name,  @novel.user %></i></h1>
 		<% if user_signed_in? %>
 			<% if current_user.voted_for? @novel %>
 				<div class="mark"><%= link_to "Remove Bookmark -", unlike_novel_path(@novel), method: :put  %></div>	
